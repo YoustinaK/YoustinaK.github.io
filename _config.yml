@@ -5,6 +5,7 @@ username: Youstina Magdy
 email: your-email@example.com
 description: >-
   Programmers of Today are The Wizards of Tomorrow.
+baseurl: "/Portfol-X"
 twitter_username: jekyllrb
 github_username:  jekyll
 
