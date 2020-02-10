@@ -1,9 +1,22 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-transparent text-white px-5 py-3">
-  <a class="navbar-brand icons-header" style=" font-size: 24px;" href="/">
+<div id="menu-overlay">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Works</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
+<nav class="navbar navbar-expand-lg bg-transparent sticky-top px-4 py-4">
+  <a
+    class="navbar-brand icons-header"
+    style=" font-size: 24px;"
+    href="{{ '/' | relative_url }}"
+  >
     {{ site.username }}
   </a>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse">
     <ul class="navbar-nav ml-auto">
       <li class="my-auto nav-item px-3">
         <a class="nav-link" href="#">
@@ -12,7 +25,11 @@
       </li>
 
       <li class="my-auto nav-item px-3">
-        <a class="nav-link" href="https://michelinemedhat.github.io/portfolMich/" target="_blank">
+        <a
+          class="nav-link"
+          href="https://michelinemedhat.github.io/portfolMich/"
+          tareg
+        >
           <i class="fab fa-dribbble icons-header"></i>
         </a>
       </li>
@@ -26,24 +43,15 @@
           Wantedly
         </a>
       </li>
-      
-      <li class="ml-4 nav-item">
-        <a class="nav-link" href="#">
-          <div id="toggleIcon" onclick="menuToggle()"> 
-          </div>
-          <div id="menu-overlay">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Works</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-          <!--<i class="fas fa-3x fa-grip-lines icons-header"></i>-->
-        </a>
-      </li>
     </ul>
   </div>
 
+  <div id="toggleIcon" class="ml-5" onclick="menuToggle()">
+    <div id="nav-icon3">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 </nav>
-
