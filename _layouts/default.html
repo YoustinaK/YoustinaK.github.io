@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 
 <html lang="en">
+  {% include head.html %}
 
-{% include head.html %}
+  <body>
+    {% include header.html %}
 
-<body>
-    {{ content }}
+    <div id="fullpage">
+      <div class="section">
+        {% include sections/home.html %}
+      </div>
+      <div class="section">
+        {% include sections/aboutMe.html %}
+      </div>
+      <div class="section">
+        {% include sections/works.html %}
+      </div>
+      <div class="section">
+        {% include sections/contact.html %}
+      </div>
+    </div>
 
-</body>
-    
+    {% include scripts.html %}
+  </body>
 </html>
