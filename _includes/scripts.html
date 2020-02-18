@@ -14,15 +14,21 @@
   crossorigin="anonymous"
 ></script>
 
+<script src="{{ '/fullpage.js' | relative_url }}"></script>
 <script type="text/javascript">
   new fullpage("#fullpage");
 </script>
 
 <script type="text/javascript">
-  function menuToggle(){
-    var nav = document.getElementById('menu-overlay');
-    nav.classList.toggle('active');
-    var nav = document.getElementById('toggleIcon');
-    nav.classList.toggle('active');
+  function menuToggle() {
+    var nav = document.getElementById("menu-overlay");
+    nav.classList.toggle("active");
+    var nav = document.getElementById("toggleIcon");
+    nav.classList.toggle("active");
   }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script>
+  new WOW().init();
 </script>

@@ -1,13 +1,14 @@
 <div id="menu-overlay">
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Works</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
+    {% for element in site.data.nav-links %}
+    <li>
+      <a href="{{ element.link | relative_url }}" onclick="menuToggle()"> {{ element.name }}</a>
+    </li>
+    {% endfor %}
   </ul>
 </div>
 
-<nav class="navbar navbar-expand-lg bg-transparent sticky-top px-4 py-4">
+<nav class="navbar navbar-expand-lg bg-transparent fixed-top px-4 py-4">
   <a
     class="navbar-brand icons-header"
     style=" font-size: 24px;"

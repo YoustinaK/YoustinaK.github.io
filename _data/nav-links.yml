@@ -1,11 +1,11 @@
 - name: Home 
-  link: \#home
+  link: "#home"
 
 - name: Works
-  link: \#works
+  link: "#works"
 
 - name: About Me
-  link: \#AboutMe
+  link: "#aboutMe"
 
 - name: Contact
-  link: \#contact
+  link: "#contact"

@@ -7,18 +7,10 @@
     {% include header.html %}
 
     <div id="fullpage">
-      <div class="section">
-        {% include sections/home.html %}
-      </div>
-      <div class="section">
-        {% include sections/aboutMe.html %}
-      </div>
-      <div class="section">
-        {% include sections/works.html %}
-      </div>
-      <div class="section">
-        {% include sections/contact.html %}
-      </div>
+      {% include sections/home.html %}
+      {% include sections/aboutMe.html %} 
+      {% include sections/works.html %} 
+      {% include sections/contact.html %}
     </div>
 
     {% include scripts.html %}
