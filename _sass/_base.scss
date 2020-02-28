@@ -97,10 +97,12 @@ body {
       outline:none;
      }
 
-     &:hover 
+     @include min-width(md) {
+      &:hover 
      {
       transform: translate(0, -5px);
      }
+    }  
 
   }
 
