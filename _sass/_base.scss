@@ -1,6 +1,6 @@
 body {
   background-image: url("../background.png");
-  background-color: #040e1b;
+  background-color: $X-background-color;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -40,11 +40,12 @@ body {
  
 }
 
+
 .left-sidebar {
   position: fixed;
   min-height: 100vh;
   width: 50px;
-  background: #040e1b;
+  background: $X-background-color;
   z-index: 10;
 
   @include min-width(md) {
@@ -66,7 +67,7 @@ body {
       width: 250px;
     }
   }
-  h2 
+  h2
   {
     margin-top: 20px;
     font-size: 2em;
@@ -78,6 +79,29 @@ body {
     margin-top: 20px;
     font-size: 1.5em;
     font-family: 'Cairo';
+  }
+
+  button
+  {
+    margin-top: 30px;
+    width: 30vh;
+    height: 50px;
+    border-radius: 25px;
+    border-color:transparent ;
+    background-color: #F85C50;
+    transition: transform .3s ease-out;
+    color: white;
+
+    &:focus{
+      border-color:transparent!important;
+      outline:none;
+     }
+
+     &:hover 
+     {
+      transform: translate(0, -5px);
+     }
+
   }
 
 }
