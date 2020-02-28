@@ -14,11 +14,6 @@
   crossorigin="anonymous"
 ></script>
 
-<script src="{{ '/fullpage.js' | relative_url }}"></script>
-<script type="text/javascript">
-  new fullpage("#fullpage");
-</script>
-
 <script type="text/javascript">
   function menuToggle() {
     var nav = document.getElementById("menu-overlay");
@@ -28,7 +23,15 @@
   }
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  new WOW().init();
+  AOS.init();
+</script>
+
+<script src="{{ '/fullpage.js' | relative_url }}"></script>
+<script type="text/javascript">
+  new fullpage("#fullpage", {
+    afterLoad: () => $(".fp-table.active .aos-init").addClass("aos-animate"),
+    onLeave: () => $(".fp-table.active .aos-init").removeClass("aos-animate")
+  });
 </script>
