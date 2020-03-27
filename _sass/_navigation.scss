@@ -80,7 +80,6 @@
   width: 40px;
   height: 25px;
   top: 8px;
-  right: 24px;
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -111,20 +110,21 @@
     transition: 0.25s ease-in-out;
   }
   span:nth-child(1) {
-    top: 0px;
+    top: -10px;
   }
 
   span:nth-child(2),
   span:nth-child(3) {
-    top: 15px;
+    top: 0px;
+    width: 70% !important;
+    left: 25%;
   }
 
   span:nth-child(4) {
-    top: 15px;
+    top: 10px;
   }
 
   &.active {
-    top: -1px;
     span:nth-child(1) {
       top: 18px;
       width: 0%;
@@ -149,6 +149,100 @@
       top: 18px;
       width: 0%;
       left: 50%;
+    }
+  }
+}
+
+////////////////////////////////////////// Left Bar ////////////////////////////////////////////////////
+#fp-nav {
+  margin: 0;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  width: 40px;
+  left: 40px;
+  overflow: hidden;
+
+  @media screen and (max-width: 1250px) {
+    width: auto;
+    top: auto;
+    left: 50%;
+    bottom: 32px;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  @media screen and (max-width: 420px) {
+    bottom: 20px;
+  }
+
+  ul {
+    @media screen and (max-width: 1250px) {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+    }
+
+    li {
+      height: 3px;
+      margin: 0 0 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media screen and (max-width: 1250px) {
+        height: auto;
+        margin: 0 28px;
+      }
+      @media screen and (max-width: 420px) {
+        margin: 0 12px;
+      }
+
+      a {
+        width: 24px;
+        height: 100%;
+        background: #fff;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+
+        span {
+          display: none;
+        }
+
+        @media screen and (max-width: 1250px) {
+          width: 3px;
+          height: 24px;
+        }
+        @media screen and (max-width: 420px) {
+          width: 2px;
+          height: 16px;
+        }
+
+        &.active {
+          width: 40px;
+          background-color: #FA9F3F;
+        }
+
+        @media screen and (max-width: 1250px) {
+          &.active {
+            width: 3px;
+            height: 40px;
+            background-color: #FA9F3F;
+          }
+        }
+
+        @media screen and (max-width: 420px) {
+          &.active {
+            width: 2px;
+            height: 32px;
+            background-color: #FA9F3F;
+          }
+        }
+      }
     }
   }
 }

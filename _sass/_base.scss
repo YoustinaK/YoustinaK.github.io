@@ -1,9 +1,19 @@
 body {
-  background-image: url("../background.png");
+  background-image: url("../img/background.png");
   background-color: $X-background-color;
   background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
+  background-size: 350px;
+  background-position: right 50% top 80px;
+
+  @include min-width(md) {
+    background-size: 500px;
+  }
+
+  @include min-width(lg) {
+    background-size: 861px;
+    background-position: right 10px top 50%;
+  }
 }
 
 #fullpage {
@@ -11,108 +21,204 @@ body {
 }
 
 .section {
-  left: $sidebar-width;
   display: flex;
   color: white;
   float: right;
+
   @include min-width(md) {
     padding: 0 0;
+    left: $sidebar-width;
   }
 }
-
-[data-aos="customized-slide-right"] {
-  opacity: 1;
-  transition-property: transform, opacity;
-  &.aos-animate {
-    opacity: 1;
-  }
-  transform: translateX(-500px);
-  &.aos-animate {
-      transform: translateX(-150px);
-    }
-
-  @include min-width(md) {
-    transform: translateX(-500px);
-    &.aos-animate {
-      transform: translateX(0);
-    }
-  }
- 
-}
-
 
 .left-sidebar {
   position: fixed;
   min-height: 100vh;
-  width: 50px;
   background: $X-background-color;
   z-index: 10;
 
   @include min-width(md) {
     width: 200px;
   }
-
 }
 
 #contact,
 #aboutMe,
 #home,
 #works {
+  font-family: $X-font;
   h1 {
-    font-size: 3em;
-    width: 150px;
-   
-    @include min-width(md) {
-      font-size: 5em;
-      width: 250px;
+    font-weight: bold;
+    font-size: 5em;
+    width: 250px;
+    @include max-width(md) {
+      position: absolute;
+      top: 60%;
+      font-size: 3em;
+      width: 150px;
     }
   }
-  h2
-  {
+  h2 {
     margin-top: 20px;
-    font-size: 2em;
-    font-family: 'Cairo';
+    font-size: 40px;
+    font-weight: lighter;
+    @include max-width(md) {
+      position: absolute;
+      font-size: 20px;
+      top: 75%;
+    }
   }
 
-  h3 
-  {
+  h3 {
     margin-top: 20px;
     font-size: 1.5em;
-    font-family: 'Cairo';
+    @include max-width(md) {
+      position: absolute;
+      top: 75%;
+      font-size: 20px;
+    }
   }
 
-  button
-  {
+  button {
     margin-top: 30px;
     width: 30vh;
     height: 50px;
     border-radius: 25px;
-    border-color:transparent ;
-    background-color: #F85C50;
-    transition: transform .3s ease-out;
+    border-color: transparent;
+    background-color: #f85c50;
+    transition: transform 0.3s ease-out;
     color: white;
 
-    &:focus{
-      border-color:transparent!important;
-      outline:none;
-     }
+    &:focus {
+      border-color: transparent !important;
+      outline: none;
+    }
 
-     @include min-width(md) {
-      &:hover 
-     {
-      transform: translate(0, -5px);
-     }
-    }  
+    @include max-width(md) {
+      position: absolute;
+      top: 75%;
+    }
 
-  }
-
-}
-
-.icons-header {
-  color: white !important;
-  font-size: 24px;
-  &:hover {
-    opacity: 50%;
+    @include min-width(md) {
+      &:hover {
+        transform: translate(0, -5px);
+      }
+    }
   }
 }
 
+img {
+  &.big {
+    width: 90%;
+    height: 90%;
+  }
+
+  &.small {
+    width: 12%;
+    height: 12%;
+    position: relative;
+
+    &.twitter {
+      right: -10%;
+      top: -55%;
+    }
+
+    &.instagram {
+      right: 5%;
+      top: -35%;
+    }
+
+    &.thumbsUP {
+      top: -65%;
+      right: -5%;
+    }
+
+    &.tinker {
+      top: -40%;
+      right: 18%;
+      width: 10% !important;
+      height: 10% !important;
+    }
+
+    &.twitterLeft {
+      top: -40%;
+      right: -10%;
+      width: 10% !important;
+      height: 10% !important;
+    }
+
+    &.pause {
+      top: -50%;
+      right: 32%;
+      width: 10% !important;
+      height: 10% !important;
+    }
+
+    &.star {
+      top: -52%;
+      right: 15%;
+      width: 8% !important;
+      height: 8% !important;
+    }
+
+    &.pinterest {
+      top: -52%;
+      right: 10%;
+      width: 10% !important;
+      height: 10% !important;
+    }
+    &.facebook {
+      top: -73%;
+      right: -58%;
+      width: 10% !important;
+      height: 10% !important;
+    }
+
+    &.yellowThumbUp {
+      top: -43%;
+      right: -60%;
+      width: 10% !important;
+      height: 10% !important;
+    }
+
+    &.cactus {
+      top: -43%;
+      right: 0%;
+      width: 15% !important;
+      height: 15% !important;
+    }
+  }
+
+  @include min-width(md) {
+    &.big {
+      width: 800px;
+      height: 800px;
+      position: absolute !important;
+    }
+  }
+}
+
+#wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  @include min-width(md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+#first {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @include min-width(md) {
+    justify-content: center;
+  }
+}
+
+#second {
+  flex: 2;
+}
