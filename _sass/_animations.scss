@@ -42,9 +42,9 @@
   &.aos-animate {
     opacity: 1;
   }
-  transform: translate(100%,10%);
+  transform: translate(100%,20%);
   &.aos-animate {
-    transform: translate(1%,10%);
+    transform: translate(1%,20%);
   }
 
   @include min-width(md) {
