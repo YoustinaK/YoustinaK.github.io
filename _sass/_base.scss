@@ -38,7 +38,7 @@ body {
   z-index: 10;
 
   @include min-width(md) {
-    width: 200px;
+    width: 180px;
   }
 }
 
@@ -48,39 +48,35 @@ body {
 #works {
   font-family: $X-font;
   h1 {
+    font-size: 2em;
     font-weight: bold;
-    font-size: 5em;
-    width: 250px;
-    @include max-width(md) {
-      position: absolute;
-      top: 60%;
-      font-size: 3em;
-      width: 150px;
+    @include min-width(md) {
+      font-size: 5em;
+      max-width: 250px;
     }
   }
   h2 {
-    margin-top: 20px;
-    font-size: 40px;
+    margin-top: 2%;
+    font-size: 20px;  
     font-weight: lighter;
-    @include max-width(md) {
-      position: absolute;
-      font-size: 20px;
-      top: 75%;
+    @include min-width(md) {
+      font-size: 40px;  
+      margin-top: 5%;
     }
   }
 
   h3 {
-    margin-top: 20px;
-    font-size: 1.5em;
-    @include max-width(md) {
-      position: absolute;
-      top: 75%;
-      font-size: 20px;
+    font-size: 1em;
+    margin-top: 2%;
+    font-weight: lighter;
+    @include min-width(md) {
+      margin-top: 5%;
+      font-size: 150%;
     }
   }
 
   button {
-    margin-top: 30px;
+    margin-top: 2%;
     width: 30vh;
     height: 50px;
     border-radius: 25px;
@@ -94,12 +90,8 @@ body {
       outline: none;
     }
 
-    @include max-width(md) {
-      position: absolute;
-      top: 75%;
-    }
-
     @include min-width(md) {
+      margin-top: 6%;
       &:hover {
         transform: translate(0, -5px);
       }
@@ -202,7 +194,7 @@ img {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
 
   @include min-width(md) {
     justify-content: center;
