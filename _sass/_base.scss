@@ -21,24 +21,28 @@ body {
 }
 
 .section {
+
   display: flex;
   color: white;
   float: right;
+  margin-bottom: 10%;
 
   @include min-width(md) {
     padding: 0 0;
     left: $sidebar-width;
+    bottom: 0;
+    top: 0;
   }
 }
 
 .left-sidebar {
   position: fixed;
-  min-height: 100vh;
-  background: $X-background-color;
-  z-index: 10;
-
   @include min-width(md) {
     width: 180px;
+    bottom: 0px;  
+    min-height: 100vh;
+    background: $X-background-color;
+    z-index: 10;
   }
 }
 
@@ -181,7 +185,7 @@ img {
 }
 
 #wrapper {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column-reverse;
   @include min-width(md) {
