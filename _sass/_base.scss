@@ -21,7 +21,6 @@ body {
 }
 
 .section {
-
   display: flex;
   color: white;
   float: right;
@@ -39,7 +38,7 @@ body {
   position: fixed;
   @include min-width(md) {
     width: 180px;
-    bottom: 0px;  
+    bottom: 0px;
     min-height: 100vh;
     background: $X-background-color;
     z-index: 10;
@@ -61,10 +60,10 @@ body {
   }
   h2 {
     margin-top: 2%;
-    font-size: 20px;  
+    font-size: 20px;
     font-weight: lighter;
     @include min-width(md) {
-      font-size: 40px;  
+      font-size: 40px;
       margin-top: 5%;
     }
   }
@@ -104,82 +103,115 @@ body {
 }
 
 img {
+  position: absolute;
   &.big {
-    width: 90%;
+    width: 50%;
   }
 
   &.small {
     width: 12%;
-    position: relative;
+
+    @include min-width(md) {
+      width: 9% !important;
+    }
 
     &.twitter {
-      right: -11%;
-      top: -43%;
+      @include top-right(calc(50% - 10%), calc(50% + 30%));
+
+      @include min-width(md) {
+        @include top-right(calc(50% - 30%), calc(50% + 40%));
+      }
     }
 
     &.instagram {
-      right: 1%;
-      top: -24%;
+      @include top-right(calc(50% + 5%), calc(50% + 25%));
+
+      @include min-width(md) {
+        @include top-right(calc(50%), calc(50% + 38%));
+      }
     }
 
     &.thumbsUP {
-      top: -54%;
-      right: -16%;
+      @include top-right(calc(50% - 25%), calc(50%));
+
+      @include min-width(md) {
+        @include top-right(calc(50% - 35%), calc(50% + 28%));
+      }
     }
 
     &.tinker {
-      top: -35%;
-      right: 17%;
+      @include top-right(calc(50% - 7%), calc(50% + 8%));
       width: 10% !important;
+
+      @include min-width(md) {
+        @include top-right(calc(50% - 12%), calc(50% + 33%));
+        width: 8% !important;
+      }
     }
 
     &.twitterLeft {
-      top: -33%;
-      right: -10%;
-      width: 10% !important;
+      @include top-right(calc(50%), calc(50% - 25%));
+
+      @include min-width(md) {
+        @include top-right(calc(50%), calc(50% - 8%));
+        width: 8% !important;
+      }
     }
 
     &.pause {
-      top: -50%;
-      right: 32%;
+      @include top-right(calc(50% - 15%), calc(50% + 17%));
       width: 10% !important;
+
+      @include min-width(md) {
+        @include top-right(calc(50% - 19%), calc(50% + 22%));
+        width: 8% !important;
+      }
     }
 
     &.star {
-      top: -43%;
-      right: 18%;
+      @include top-right(calc(50% - 10%), calc(50% - 20%));
       width: 8% !important;
+
+      @include min-width(md) {
+        @include top-right(calc(50% - 15%), calc(50% - 2%));
+        width: 6% !important;
+      }
     }
 
     &.pinterest {
-      top: -43%;
-      right: 13%;
+      @include top-right(calc(50% - 10%), calc(50% - 35%));
       width: 10% !important;
+
+      @include min-width(md) {
+        @include top-right(calc(50% - 22%), calc(50% - 19%));
+      }
     }
+
     &.facebook {
-      top: -64%;
-      right: -58%;
+      @include top-right(calc(50% - 20%), calc(50% - 22%));
       width: 10% !important;
+
+      @include min-width(md) {
+        @include top-right(calc(50% - 33%), calc(50% - 6%));
+      }
     }
 
     &.yellowThumbUp {
-      top: -36%;
-      right: -59%;
+      @include top-right(calc(50% + 5%), calc(50% - 35%));
       width: 10% !important;
+
+      @include min-width(md) {
+        @include top-right(calc(50% + 5%), calc(50% - 19%));
+      }
     }
 
     &.cactus {
-      top: -31%;
-      right: 0%;
+      @include top-right(calc(50% + 5%), calc(50% + 7%));
       width: 15% !important;
-    }
-  }
 
-  @include min-width(md) {
-    &.big {
-      width: 800px;
-      height: 800px;
-      position: absolute !important;
+      @include min-width(md) {
+        @include top-right(calc(50% + 2%), calc(50% + 21%));
+      }
     }
   }
 }
@@ -187,10 +219,10 @@ img {
 #wrapper {
   height: 100%;
   display: flex;
+  position: relative;
   flex-direction: column-reverse;
   @include min-width(md) {
     flex-direction: row;
-    flex-wrap: wrap;
   }
 }
 
@@ -207,4 +239,5 @@ img {
 
 #second {
   flex: 2;
+  position: relative;
 }

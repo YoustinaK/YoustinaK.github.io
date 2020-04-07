@@ -9,3 +9,8 @@
     @content;
   }
 }
+
+@mixin top-right ($top, $right) {
+  top: $top;
+  right: $right;
+}

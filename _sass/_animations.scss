@@ -42,15 +42,15 @@
   &.aos-animate {
     opacity: 1;
   }
-  transform: translate(100%,20%);
+  transform: translate(200%, 75%);
   &.aos-animate {
-    transform: translate(1%,20%);
+    transform: translate(45%, 75%);
   }
 
   @include min-width(md) {
-    transform: translate(700px, -40px);
+    transform: translate(200%, 20%);
     &.aos-animate {
-      transform: translate(-20px, -40px);
+      transform: translate(20%, 20%);
     }
   }
 }
