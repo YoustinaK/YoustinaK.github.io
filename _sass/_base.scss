@@ -8,7 +8,7 @@
     color: white;
     float: right;
     margin-bottom: 10%;
-    @include min-width(md) {
+    @include min-width(lg) {
         padding: 0 0;
         left: $sidebar-width;
         bottom: 0;
@@ -19,6 +19,13 @@
 .left-sidebar {
     position: fixed;
     @include min-width(md) {
+        width: 50px;
+        bottom: 0px;
+        min-height: 100vh;
+        background: $X-background-color;
+        z-index: 10;
+    }
+    @include min-width(lg) {
         width: 180px;
         bottom: 0px;
         min-height: 100vh;
@@ -35,7 +42,7 @@
     h1 {
         font-size: 2em;
         font-weight: bold;
-        @include min-width(md) {
+        @include min-width(lg) {
             font-size: 5em;
             max-width: 250px;
         }
@@ -44,7 +51,7 @@
         margin-top: 2%;
         font-size: 20px;
         font-weight: lighter;
-        @include min-width(md) {
+        @include min-width(lg) {
             font-size: 40px;
             margin-top: 5%;
         }
@@ -53,7 +60,7 @@
         font-size: 1em;
         margin-top: 2%;
         font-weight: lighter;
-        @include min-width(md) {
+        @include min-width(lg) {
             margin-top: 5%;
             font-size: 150%;
         }
@@ -89,7 +96,11 @@ img {
         top: 0;
         bottom: 0;
         margin: auto auto;
-        @include min-width(md) {
+        @include min-width(lg) {
+            width: 40%;
+        }
+        @include min-width(lg) {
+            width: 50%;
             right: 30%;
             left: 0;
             top: 0;
@@ -104,6 +115,10 @@ img {
         bottom: 0;
         margin: auto auto;
         @include min-width(md) {
+            width: 60%;
+            top: 5%;
+        }
+        @include min-width(lg) {
             width: 90%;
             top: 0;
             bottom: 0;
@@ -113,31 +128,46 @@ img {
     }
     &.small {
         width: 12%;
-        @include min-width(md) {
+        @include min-width(lg) {
             width: 9% !important;
         }
         &.twitter {
             @include top-right(calc(50% - 10%), calc(50% + 30%));
             @include min-width(md) {
+                width: 9% !important;
+                @include top-right(calc(50% - 30%), calc(50% + 17%));
+            }
+            @include min-width(lg) {
                 @include top-right(calc(50% - 30%), calc(50% + 40%));
             }
         }
         &.instagram {
             @include top-right(calc(50% + 5%), calc(50% + 25%));
             @include min-width(md) {
+                width: 9% !important;
+                @include top-right(calc(50% + 5%), calc(50% + 21%));
+            }
+            @include min-width(lg) {
                 @include top-right(calc(50%), calc(50% + 38%));
             }
         }
         &.thumbsUP {
             @include top-right(calc(50% - 25%), calc(50%));
             @include min-width(md) {
+                @include top-right(calc(50% - 36%), calc(50% + 3%));
+            }
+            @include min-width(lg) {
                 @include top-right(calc(50% - 35%), calc(50% + 28%));
             }
         }
         &.tinker {
-            @include top-right(calc(50% - 7%), calc(50% + 8%));
             width: 10% !important;
+            @include top-right(calc(50% - 7%), calc(50% + 8%));
             @include min-width(md) {
+                width: 8% !important;
+                @include top-right(calc(50% - 18%), calc(50% + 6%));
+            }
+            @include min-width(lg) {
                 @include top-right(calc(50% - 12%), calc(50% + 33%));
                 width: 8% !important;
             }
@@ -145,6 +175,9 @@ img {
         &.twitterLeft {
             @include top-right(calc(50%), calc(50% - 25%));
             @include min-width(md) {
+                width: 9% !important;
+            }
+            @include min-width(lg) {
                 @include top-right(calc(50%), calc(50% - 8%));
                 width: 8% !important;
             }
@@ -152,7 +185,7 @@ img {
         &.pause {
             @include top-right(calc(50% - 15%), calc(50% + 17%));
             width: 10% !important;
-            @include min-width(md) {
+            @include min-width(lg) {
                 @include top-right(calc(50% - 19%), calc(50% + 22%));
                 width: 8% !important;
             }
@@ -160,7 +193,7 @@ img {
         &.star {
             @include top-right(calc(50% - 10%), calc(50% - 20%));
             width: 8% !important;
-            @include min-width(md) {
+            @include min-width(lg) {
                 @include top-right(calc(50% - 15%), calc(50% - 2%));
                 width: 6% !important;
             }
@@ -169,6 +202,11 @@ img {
             @include top-right(calc(50% - 10%), calc(50% - 35%));
             width: 10% !important;
             @include min-width(md) {
+                width: 9% !important;
+                @include top-right(calc(50% - 20%), calc(50% - 29%));
+            }
+            @include min-width(lg) {
+                width: 10% !important;
                 @include top-right(calc(50% - 22%), calc(50% - 19%));
             }
         }
@@ -176,20 +214,23 @@ img {
             @include top-right(calc(50% - 20%), calc(50% - 22%));
             width: 10% !important;
             @include min-width(md) {
+                @include top-right(calc(50% - 32%), calc(50% - 18%));
+            }
+            @include min-width(lg) {
                 @include top-right(calc(50% - 33%), calc(50% - 6%));
             }
         }
         &.yellowThumbUp {
             @include top-right(calc(50% + 5%), calc(50% - 35%));
             width: 10% !important;
-            @include min-width(md) {
+            @include min-width(lg) {
                 @include top-right(calc(50% + 5%), calc(50% - 19%));
             }
         }
         &.cactus {
             @include top-right(calc(50% + 5%), calc(50% + 7%));
             width: 15% !important;
-            @include min-width(md) {
+            @include min-width(lg) {
                 @include top-right(calc(50% + 2%), calc(50% + 21%));
             }
         }
@@ -212,7 +253,7 @@ img {
     display: flex;
     float: right;
     flex-direction: column-reverse;
-    @include min-width(md) {
+    @include min-width(lg) {
         padding: 0 0;
         flex-direction: row;
         left: $sidebar-width;
@@ -226,7 +267,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    @include min-width(md) {
+    @include min-width(lg) {
         justify-content: center;
     }
 }
@@ -241,7 +282,7 @@ img {
     display: flex;
     position: relative;
     flex-direction: column-reverse;
-    @include min-width(md) {
+    @include min-width(lg) {
         flex-direction: row;
     }
 }
@@ -251,7 +292,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    @include min-width(md) {
+    @include min-width(lg) {
         justify-content: center;
     }
 }
