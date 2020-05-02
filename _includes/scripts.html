@@ -3,24 +3,27 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
-  function menuToggle() {
-    var nav = document.getElementById("menu-overlay");
-    nav.classList.toggle("active");
-    var nav = document.getElementById("toggleIcon");
-    nav.classList.toggle("active");
-  }
+    function menuToggle() {
+        var nav = document.getElementById("menu-overlay");
+        nav.classList.toggle("active");
+        var nav = document.getElementById("toggleIcon");
+        nav.classList.toggle("active");
+    }
 </script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  AOS.init({ startEvent: "load" });
+    AOS.init({
+        startEvent: "load"
+    });
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
 <script type="text/javascript">
-  new fullpage("#fullpage", {
-    navigation: true,
-    afterLoad: () => $(".fp-table.active .aos-init").addClass("aos-animate"),
-    onLeave: () => $(".fp-table.active .aos-init").removeClass("aos-animate")
-  });
+    new fullpage("#fullpage", {
+        navigation: true,
+        anchors: ['home', 'work', 'about', 'contact'],
+        afterLoad: () => $(".fp-table.active .aos-init").addClass("aos-animate"),
+        onLeave: () => $(".fp-table.active .aos-init").removeClass("aos-animate")
+    });
 </script>

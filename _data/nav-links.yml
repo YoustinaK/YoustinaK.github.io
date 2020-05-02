@@ -2,10 +2,10 @@
   link: "#home"
 
 - name: Works
-  link: "#works"
+  link: "#work"
 
 - name: About Me
-  link: "#aboutMe"
+  link: "#about"
 
 - name: Contact
   link: "#contact"

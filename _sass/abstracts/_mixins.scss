@@ -1,16 +1,16 @@
 @mixin min-width($breakpoint) {
-  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
-    @content;
-  }
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) and (orientation: landscape) {
+        @content;
+    }
 }
 
 @mixin max-width($breakpoint) {
-  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
-    @content;
-  }
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
 }
 
 @mixin top-right ($top, $right) {
-  top: $top;
-  right: $right;
+    top: $top;
+    right: $right;
 }
