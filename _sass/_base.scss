@@ -67,7 +67,7 @@
     }
     button {
         margin-top: 2%;
-        max-width: 250px;
+        max-width: 200px;
         height: 50px;
         border-radius: 25px;
         border-color: transparent;
@@ -79,7 +79,15 @@
             outline: none;
         }
         @include min-width(md) {
+            max-width: 200px !important;
+            margin-top: 1%;
+            &:hover {
+                transform: translate(0, -5px);
+            }
+        }
+        @include min-width(lg) {
             margin-top: 6%;
+            max-width: 250px !important;
             &:hover {
                 transform: translate(0, -5px);
             }
@@ -96,7 +104,7 @@ img {
         top: 0;
         bottom: 0;
         margin: auto auto;
-        @include min-width(lg) {
+        @include min-width(md) {
             width: 40%;
         }
         @include min-width(lg) {
@@ -114,6 +122,10 @@ img {
         top: -10%;
         bottom: 0;
         margin: auto auto;
+        @include min-width(sm) {
+            width: 70%;
+            top: 10%
+        }
         @include min-width(md) {
             width: 60%;
             top: 5%;
@@ -145,6 +157,54 @@ img {
             left: -19%;
         }
     }
+    &.portfolio {
+        width: 70%;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto auto;
+        border-radius: 25px;
+        @include min-width(sm) {
+            width: 60%;
+            top: 10%;
+        }
+        @include min-width(md) {
+            width: 50%;
+            top: 10%;
+        }
+        @include min-width(lg) {
+            width: 75%;
+            top: 0;
+            bottom: 0;
+            right: 10%;
+            left: -19%;
+        }
+    }
+    &.portfolioBackground {
+        display: none;
+        @include min-width(lg) {
+            width: 90%;
+            right: 0;
+            left: -3%;
+            top: 25%;
+            bottom: 0;
+            margin: auto auto;
+            display: flex;
+        }
+    }
+    &.aboutBackground {
+        display: none;
+        @include min-width(lg) {
+            width: 80%;
+            right: 0;
+            left: -16%;
+            top: 11%;
+            bottom: 0;
+            margin: auto auto;
+            display: flex;
+        }
+    }
     &.small {
         width: 12%;
         @include min-width(lg) {
@@ -172,6 +232,9 @@ img {
         }
         &.thumbsUP {
             @include top-right(calc(50% - 25%), calc(50%));
+            @include min-width(sm) {
+                @include top-right(calc(50% - 30%), calc(50% + 5%));
+            }
             @include min-width(md) {
                 @include top-right(calc(50% - 36%), calc(50% + 3%));
             }
@@ -193,6 +256,9 @@ img {
         }
         &.twitterLeft {
             @include top-right(calc(50%), calc(50% - 25%));
+            @include min-width(sm) {
+                width: 9% !important;
+            }
             @include min-width(md) {
                 width: 9% !important;
             }
@@ -232,6 +298,9 @@ img {
         &.facebook {
             @include top-right(calc(50% - 20%), calc(50% - 22%));
             width: 10% !important;
+            @include min-width(sm) {
+                @include top-right(calc(50% - 30%), calc(50% - 18%));
+            }
             @include min-width(md) {
                 @include top-right(calc(50% - 32%), calc(50% - 18%));
             }
@@ -251,6 +320,19 @@ img {
             width: 15% !important;
             @include min-width(lg) {
                 @include top-right(calc(50% + 2%), calc(50% + 21%));
+            }
+        }
+        &.portfolioCactus {
+            width: 18% !important;
+            @include top-right(calc(50% + 7%), calc(50% - 40%));
+            @include min-width(sm) {
+                @include top-right(calc(50% + 15%), calc(50% - 35%));
+            }
+            @include min-width(md) {
+                @include top-right(calc(50% + 13%), calc(50% - 34%));
+            }
+            @include min-width(lg) {
+                @include top-right(calc(50% + 19%), calc(50% - 27%));
             }
         }
     }
@@ -319,4 +401,33 @@ img {
 #second {
     flex: 2;
     position: relative;
+}
+
+#cover {
+    position: absolute;
+    width: 70%;
+    height: 40%;
+    right: 0;
+    left: 0;
+    top: -10%;
+    bottom: 0;
+    margin: auto auto;
+    background: #ff4d5a;
+    border-radius: 25px;
+    @include min-width(md) {
+        height: 52%;
+        width: 50%;
+        top: 10%;
+    }
+    @include min-width(lg) {
+        width: 80%;
+        height: 72%;
+        top: 0;
+        bottom: 0;
+        right: 10%;
+        left: -19%;
+    }
+    &:last-child {
+        background: #072142
+    }
 }

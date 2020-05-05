@@ -149,7 +149,7 @@
     width: 40px;
     left: 40px;
     overflow: hidden;
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 992px), (orientation: portrait) {
         width: auto;
         top: auto;
         left: 50%;
@@ -161,7 +161,7 @@
         bottom: 20px;
     }
     ul {
-        @media screen and (max-width: 992px) {
+        @media screen and (max-width: 992px), (orientation: portrait) {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -175,7 +175,8 @@
             &:last-child {
                 margin-bottom: 0;
             }
-            @media screen and (max-width: 992px) {
+            @media screen and (max-width: 992px),
+            (orientation: portrait) {
                 height: auto;
                 margin: 0 28px;
             }
@@ -192,7 +193,8 @@
                 span {
                     display: none;
                 }
-                @media screen and (max-width: 992px) {
+                @media screen and (max-width: 992px),
+                (orientation: portrait) {
                     width: 3px;
                     height: 24px;
                 }
@@ -204,7 +206,8 @@
                     width: 40px;
                     background-color: #FA9F3F;
                 }
-                @media screen and (max-width: 992px) {
+                @media screen and (max-width: 992px),
+                (orientation: portrait) {
                     &.active {
                         width: 3px;
                         height: 40px;
