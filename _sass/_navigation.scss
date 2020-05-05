@@ -33,14 +33,16 @@
             list-style: none;
             text-align: center;
             display: block;
+            padding-top: 20px;
             a {
+                font-family: $X-font;
                 position: relative;
                 text-decoration: none;
-                font-size: 4em;
                 color: #fff;
                 margin-bottom: 10px;
+                font-size: 2.5em;
                 padding: 0px 20px;
-                font-weight: 300;
+                font-weight: bold;
                 text-transform: uppercase;
                 &:before {
                     content: " ";
@@ -58,6 +60,9 @@
                     transform: translateY(-50%) scaleX(1);
                     transform-origin: left;
                     transition: 0.5s transform;
+                }
+                @include min-width(lg) {
+                    font-size: 4em;
                 }
             }
         }
